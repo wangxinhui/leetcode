@@ -5,7 +5,7 @@ package com.leetcode.j_test;
  */
 public class J_main {
     public static void main(String[] args) {
-        Teacher t =  new Teacher();
+        O_all t =  new Teacher();
         t.walk();
     }
 }

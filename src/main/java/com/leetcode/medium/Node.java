@@ -58,18 +58,35 @@ class LinkList{
         linkList1.insertHead(5);
         linkList1.insertHead(6);
         linkList1.insertHead(4);
-        int i = 0;
-        double a = 0;
-        while (linkList.hasNext()){
-            a += (Integer)linkList.next() * Math.pow(10,i);
-            i++;
+//        int i = 0;
+//        double a = 0;
+//        while (linkList.hasNext()){
+//            a += (Integer)linkList.next() * Math.pow(10,i);
+//            i++;
+//        }
+//        int j =0;
+//        double b = 0;
+//        while (linkList1.hasNext()){
+//            b += (Integer)linkList1.next() * Math.pow(10,j);
+//            j++;
+//        }
+//        System.out.println(a + b);
+
+
+        LinkList resLink = new LinkList();
+        int remainder = 0;
+        while (linkList.hasNext() || linkList1.hasNext()){
+            Object x =  linkList.next();
+            Object y =  linkList1.next();
+            x = x == null ? 0 : x;
+            y = y == null ? 0 : y;
+
+//            int x = linkList.next()==null?0: (int) linkList.next();
+//            int y = linkList1.next()==null?0: (int) linkList1.next();
+            int res = (Integer)x + (Integer)y + remainder;
+            resLink.insertHead(res%10);
+            remainder = (res) / 10;
         }
-        int j =0;
-        double b = 0;
-        while (linkList1.hasNext()){
-            b += (Integer)linkList1.next() * Math.pow(10,j);
-            j++;
-        }
-        System.out.println(a + b);
+        System.out.println(resLink);
     }
 }
