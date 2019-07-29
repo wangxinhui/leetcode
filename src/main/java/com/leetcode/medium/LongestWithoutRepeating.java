@@ -9,15 +9,15 @@ import java.util.Set;
 public class LongestWithoutRepeating {
 
     public static void main(String[] args) {
-        getLongestStr("ss");
+
     }
 
-    public static String getLongestStr(String str){
+    public static String getLongestStr(String str) {
         int length = str.length();
         int ans = 0;
 
         for (int i = 0; i < length; i++) {
-            for (int j = 0; j <= length; j++) {
+            for (int j = i+1; j <= length; j++) {
 
             }
         }
@@ -26,7 +26,20 @@ public class LongestWithoutRepeating {
         set.add("java");
         set.add("java");
         set.add("python");
-            System.out.println(set.contains("java"));
+        System.out.println(set.contains("java"));
         return null;
     }
+
+    private boolean isSame(String s,int start,int end){
+        Set<Character> set = new HashSet();
+        for (int i = 0; i < s.length(); i++) {
+            Character c = s.charAt(i);
+            if (set.contains(c)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 }
