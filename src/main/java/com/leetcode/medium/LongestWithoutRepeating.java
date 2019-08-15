@@ -50,6 +50,8 @@ public class LongestWithoutRepeating {
 //    }
 //    -------------------method 01-------------------------
 
+
+//    -------------------method 02-------------------------
     public int lengthOfLongestSubstring(String s){
         Set<Character> set = new HashSet<>();
         int ans = 0,i=0,j=0;
@@ -64,5 +66,6 @@ public class LongestWithoutRepeating {
         }
         return ans;
     }
+//    -------------------method 02-------------------------
 
 }
